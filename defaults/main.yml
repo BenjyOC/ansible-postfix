@@ -2,6 +2,7 @@
 postfix_service_state: started
 postfix_service_enabled: true
 postfix_config_file: /etc/postfix/main.cf
+postfix_myhostname: local
 postfix_parameters:
   inet_interfaces: localhost
   inet_protocols: all

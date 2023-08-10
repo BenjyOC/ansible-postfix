@@ -19,10 +19,10 @@ smtp_tls_security_level=may
 smtp_tls_session_cache_database = btree:${data_directory}/smtp_scache
 
 smtpd_relay_restrictions = permit_mynetworks permit_sasl_authenticated defer_unauth_destination
-myhostname = pi-01.home
+myhostname = {{ postfix_myhostname }}
 alias_maps = hash:/etc/aliases
 alias_database = hash:/etc/aliases
-mydestination = $myhostname, pi-01, localhost.localdomain, , localhost
+mydestination = $myhostname localhost.localdomain localhost
 mailbox_size_limit = 0
 recipient_delimiter = +
 {% if postfix_parameters|length > 0 %}
