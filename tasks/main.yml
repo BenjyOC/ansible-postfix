@@ -6,6 +6,7 @@
   with_items:
     - postfix
     - mailutils
+    - libsasl2-modules
 
 - name: Overlay postfix sasl password maps
   template:
